@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>Ishant Technology | Technical Support</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #e3f2fd, #f5f5f5);
+            color: #222;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* HEADER / NAVBAR */
+        header {
+            background: linear-gradient(90deg, #0b3c88, #1565c0);
+            color: #fff;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        /* Text Based Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-circle {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #ffffff;
+            color: #0b3c88;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .logo-text {
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+        }
+
+        .logo-text span {
+            font-weight: 400;
+            color: #dfeefc;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        nav a.active,
+        nav a:hover {
+            background: rgba(255,255,255,0.15);
+        }
+
+        /* SECTIONS */
+        .page-section {
+            max-width: 1100px;
+            margin: 20px auto;
+            background: rgba(255,255,255,0.97);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+            display: none;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        .page-section.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            animation: fadeInUp 0.4s ease;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 10px;
+            color: #0b3c88;
+        }
+
+        p { margin-bottom: 8px; }
+        .tagline { font-size: 1rem; margin-top: 8px; }
+        ul { margin-left: 18px; margin-top: 6px; }
+        li { margin-bottom: 4px; }
+
+        .services-highlight {
+            background: #fff8e1;
+            border-left: 4px solid #ff6f00;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+
+        .contact-box {
+            background: #e9f2ff;
+            border-left: 4px solid #0b3c88;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.8rem;
+            padding: 10px 0 16px;
+            color: #555;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1100;
+        }
+
+        .whatsapp-float span {
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 700px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR + LOGO -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-circle">IT</div>
+                <div class="logo-text">Ishant <span>Technology</span></div>
+            </div>
+            <nav>
+                <a href="#home" data-section="home" class="nav-link active">Home</a>
+                <a href="#services" data-section="services" class="nav-link">Services</a>
+                <a href="#contact" data-section="contact" class="nav-link">Contact</a>
+                <a href="#about" data-section="about" class="nav-link">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HOME -->
+    <section id="home" class="page-section active">
+        <h1>Welcome Ishant Technology</h1>
+        <p class="tagline">Your trusted partner for all technical support & online services.</p>
+        <p>यहाँ पर आपको विभिन्न प्रकार की ऑनलाइन सेवाएँ और तकनीकी सहायता एक ही स्थान पर उपलब्ध कराई जाती है।</p>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="page-section">
+        <h2>🛑 हमारी सेवाएँ -</h2>
+
+        <div class="services-highlight">
+            <h3>1. ड्राइविंग लाइसेंस सेवाएँ</h3>
+            <p>Form भरना, संशोधन, आवेदन की स्थिति जानना आदि सेवाएँ उपलब्ध।</p>
+        </div>
+
+        <div class="services-highlight">
+            <h3>2. श्रमिक कार्ड सेवाएँ</h3>
+            <ul>
+                <li>1️⃣ नया श्रमिक कार्ड पंजीकरण (₹140/-)</li>
+                <li>2️⃣ नवीनीकरण शुल्क + ₹50</li>
+                <li>3️⃣ श्रमिक कार्ड डाउनलोड ₹20</li>
+                <li>4️⃣ योजना स्थिति पता करना</li>
+            </ul>
+        </div>
+
+        <div class="services-highlight">
+            <h3>3. आयुष्मान भारत सेवाएँ</h3>
+            <ul>
+                <li>✅ Family में नया सदस्य जोड़ना</li>
+                <li>✅ नया आयुष्मान कार्ड बनवाना</li>
+            </ul>
+
+            <p style="margin-top:8px;"><strong>लाभ:</strong></p>
+            <ul>
+                <li>💠 हर परिवार के लिए ₹5 लाख तक का इलाज मुफ्त</li>
+                <li>💠 सरकारी व प्राइवेट अस्पतालों में कैशलेस इलाज</li>
+                <li>💠 बड़ी सर्जरी तक कवर</li>
+                <li>💠 भर्ती से पहले/बाद की दवाएँ भी शामिल</li>
+                <li>💠 गरीब परिवारों के लिए आर्थिक सुरक्षा</li>
+            </ul>
+        </div>
+
+        <h3 style="margin-top:15px;">श्रमिकों के लिए महत्वपूर्ण योजनाएँ</h3>
+        <ul>
+            <li>1️⃣ शिशु हितलाभ योजना</li>
+            <li>2️⃣ कन्या विवाह अनुदान योजना</li>
+            <li>3️⃣ निर्माण कामगार मृत्यु/दिव्यंगता सहायता</li>
+            <li>4️⃣ संत रविदास शिक्षा सहायता योजना</li>
+            <li>5️⃣ अटल आवासीय विद्यालय योजना</li>
+        </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="page-section">
+        <h2>Contact</h2>
+        <div class="contact-box">
+            📞 Phone:<br>
+            <a href="tel:9454238343">9454238343</a><br>
+            <a href="tel:9569615494">9569615494</a><br><br>
+
+            💬 WhatsApp:<br>
+            <a href="https://wa.me/919454238343" target="_blank">9454238343</a><br>
+            <a href="https://wa.me/919569615494" target="_blank">9569615494</a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="page-section">
+        <h2>About</h2>
+        <p>हमारा उद्देश्य आपको बेहतर तकनीकी समाधान और विश्वसनीय ऑनलाइन सेवाएँ प्रदान करना है।</p>
+        <p>किसी भी प्रकार की समस्या या सहायता के लिए निशुल्क संपर्क करें।</p>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="footer">© 2025 Ishant Technology. All rights reserved.</div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919454238343" class="whatsapp-float" target="_blank">
+        <span>WA</span>
+    </a>
+
+    <!-- JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('.page-section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            function showSection(sectionId) {
+                sections.forEach(sec => sec.classList.remove('active'));
+                navLinks.forEach(link => link.classList.remove('active'));
+
+                const targetSection = document.getElementById(sectionId);
+                if (targetSection) {
+                    targetSection.classList.remove('active');
+                    void targetSection.offsetWidth;  
+                    targetSection.classList.add('active');
+                }
+
+                navLinks.forEach(link => {
+                    if (link.getAttribute('data-section') === sectionId) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const sectionId = this.getAttribute('data-section');
+                    window.location.hash = sectionId;
+                    showSection(sectionId);
+                });
+            });
+
+            function handleHashChange() {
+                let hash = window.location.hash.replace('#', '');
+                if (!hash) hash = 'home';
+                showSection(hash);
+            }
+
+            window.addEventListener('hashchange', handleHashChange);
+            handleHashChange();
+        });
+    </script>
+</body>
+</html>
